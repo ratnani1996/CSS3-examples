@@ -1,0 +1,158 @@
+/* animation*/
+
+@keyframes starPulse
+{
+    from
+    {
+        opacity: 1;
+    }
+    to
+    {
+        opacity: 0.2;
+    }
+}
+
+@keyframes sunfire
+{
+    from
+    {
+        box-shadow: 0px 0px 50px #f5c918;
+    }
+    to
+    {
+        box-shadow: 0px 0px 100px #f5c918;
+    }
+}
+
+@keyframes spin-earth-orbit
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-moon-orbit
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-earth
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+body,html,.container-fluid
+{
+    height: 100%;
+    width: 100%;
+    background: black;
+    background: radial-gradient(#555,#000);
+}
+
+.stars
+{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-image: url(Data/images/galaxy-s8-packaging_starbackground.png);
+    background-repeat: repeat;
+    animation-name: starPulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+.sun
+{
+    position: absolute;
+    z-index: 3;
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    background: radial-gradient(#f5c313,#ec7e08);
+    border-radius: 100px;
+    position: relative;
+    left: 55%;
+    top: 40%;
+    box-shadow: 0px 0px 50px #f5c918;
+    border-color: orange;
+    animation-name: sunfire;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.earthOrbit
+{
+    position: absolute;
+    height: 560px;
+    width: 500px;
+    left: 45%;
+    border-radius: 100%;
+    animation-name: spin-earth-orbit;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#earth
+{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    animation-name: spin-earth;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moonOrbit
+{
+    height: 125px;
+    width: 125px;
+    position: absolute;
+    top: 50%;
+    margin-top: -29px;
+    margin-left: -29px;
+    border-radius: 100%;
+    animation-name: spin-moon-orbit;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moon
+{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    background-color: gray;
+    border-radius: 100%;
+    background:radial-gradient(#ddd,#888);
+    
+}
+

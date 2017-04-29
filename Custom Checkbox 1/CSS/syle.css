@@ -1,0 +1,60 @@
+body,html,.container
+{
+    height: 100%;
+    width: 100%;
+}
+
+.container
+{
+    position: relative;
+    top: 10%;
+}
+
+#check
+{
+    position: absolute;
+    visibility: hidden;
+}
+
+#label-check
+{
+    position: absolute;
+    background-color: white;
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    border-radius: 30px;
+    border: 1px solid lightgrey;
+    border-width: 5px;
+    border-style: double;
+}
+
+#label-check:before
+{
+    content: '';
+    height: 34px;
+    width: 32px;
+    background-color: lightgrey;
+    position: absolute;
+    border-radius: 100%;
+    top: -7px;
+    left: -5px;
+    box-shadow: 0px 0px 10px grey;
+    transition: transform 1s,background 0.5s; 
+}
+
+
+.toggle-switch #check:checked+label
+{
+    background-color: lightgrey;
+}
+
+
+.toggle-switch #check:checked+label:before
+{
+    background-color: darkslategray;
+    transform: translate(50px);
+    position: absolute;
+    top: -7px;
+    left: -5px;
+}

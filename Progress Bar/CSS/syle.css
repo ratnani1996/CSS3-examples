@@ -1,0 +1,100 @@
+body,html,.container
+{
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+.container
+{
+    position: relative;
+    top: 40px;
+}
+.progressbar li
+{
+    list-style: none;
+    float: left;
+    width: 33.33%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+
+.progressbar li:first-child:before
+{
+    content: '1';
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: white;
+}
+.progressbar li:nth-child(2):before
+{
+    content: '2';
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: white;
+}
+
+.progressbar li:nth-child(3):before
+{
+    content: '3';
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: white;
+}
+
+.progressbar li:after
+{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    top: 13px;
+    left: 49%;
+    position: absolute;
+    z-index: -1;
+}
+
+.progressbar li:nth-child(3):after
+{
+    display: none;
+}
+
+
+.progressbar li.active:before
+{
+    font-weight: 700;
+    background-color: mediumaquamarine;
+    color: white;
+    border: 2px solid mediumaquamarine;
+}
+
+.progressbar li.active
+{
+    color: mediumaquamarine;
+    font-weight: 700;
+}
+
+.progressbar li.active:after
+{
+    background-color: mediumaquamarine;
+    height: 5px;
+}
